@@ -69,3 +69,98 @@ export const equipe = [
     },
 
   ];
+
+  export const portifolio = [
+    {
+      id: 1,
+      title: 'Casamento',
+      description: 'Uma celebração de amor e união.',
+      url: '/portifolio/videos/8.webm',
+      type: 'video' as const,
+    },
+    {
+      id: 2,
+      title: 'Aniversário',
+      description: 'Comemorações cheias de alegria e diversão.',
+      url: '/portifolio/fotos/2.webp',
+      type: 'image' as const,
+    },
+    {
+      id: 3,
+      title: 'Vídeo Casamento',
+      description: 'Registro em vídeo de momentos especiais.',
+      url: '/portifolio/videos/1.webm',
+      type: 'video' as const,
+    },
+    {
+      id: 4,
+      title: 'Formatura',
+      description: 'Capturando momentos de conquista e celebração.',
+      url: '/portifolio/fotos/3.webp',
+      type: 'image' as const,
+    },
+    {
+      id: 5,
+      title: 'Ensaios',
+      description: 'Sessões fotográficas criativas e artísticas.',
+      url: '/portifolio/videos/5.webm',
+      type: 'video' as const,
+    },
+    {
+      id: 6,
+      title: 'Vídeo Corporativo',
+      description: 'Cobertura profissional de eventos empresariais.',
+      url: '/portifolio/videos/2.webm',
+      type: 'video' as const,
+    },
+    {
+      id: 7,
+      title: 'Eventos Corporativos',
+      description: 'Registrando a essência de eventos profissionais.',
+      url: '/portifolio/fotos/5.webp',
+      type: 'image' as const,
+    },
+    {
+      id: 8,
+      title: 'Novo Projeto',
+      description: 'Uma visão inovadora para o futuro.',
+      url: '/portifolio/videos/7.webm',
+      type: 'video' as const,
+    },
+    { 
+      id: 9,
+      title: 'Ensaio Visual',
+      description: 'Produção audiovisual criativa.',
+      url: '/portifolio/videos/3.webm',
+      type: 'video' as const,
+    },
+    {
+      id: 10,
+      title: 'Novo Projeto',
+      description: 'Uma visão inovadora para o futuro.',
+      url: '/portifolio/fotos/7.webp',
+      type: 'image' as const,
+    },
+    {
+      id: 11,
+      title: 'Projeto Especial',
+      description: 'Criatividade em cada detalhe.',
+      url: '/portifolio/fotos/8.webp',
+      type: 'image' as const,
+    },
+    {
+      id: 12,
+      title: 'Momento Único',
+      description: 'Capturando emoções verdadeiras.',
+      url: '/portifolio/fotos/9.webp',
+      type: 'image' as const,
+    },
+    {
+      id: 13,
+      title: 'Arte Visual',
+      description: 'Expressão através da fotografia.',
+      url: '/portifolio/fotos/10.webp',
+      type: 'image' as const,
+    },
+    
+  ];
