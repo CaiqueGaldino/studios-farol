@@ -91,7 +91,7 @@ const Carousel = memo(
     isCarouselActive,
   }: {
     handleClick: (item: MediaItem, index: number) => void
-    controls: any
+    controls: ReturnType<typeof useAnimation>
     cards: MediaItem[]
     isCarouselActive: boolean
   }) => {
@@ -188,8 +188,7 @@ const Carousel = memo(
   }
 )
 
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`
+Carousel.displayName = "Carousel"
 
 interface MediaItem {
   url: string
