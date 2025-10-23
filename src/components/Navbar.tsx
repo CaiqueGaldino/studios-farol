@@ -13,7 +13,7 @@ const rationale = Rationale({
 export default function Navbar() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      <nav className="max-w-7xl mx-auto bg-black/40 dark:bg-neutral-900/80 backdrop-blur-md rounded-2xl shadow-lg  px-6 py-3">
+      <nav className="max-w-7xl mx-auto bg-black/60 backdrop-blur-md rounded-2xl shadow-lg px-6 py-3">
       <div className="flex items-center justify-between">
         {/* Logo à esquerda */}
         <div className="shrink-0">
@@ -33,19 +33,19 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-8">
           <Link
             href="/portfolio"
-            className="text-white dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium"
+            className="text-white hover:text-gray-300 transition-colors font-medium"
           >
             Portfólio
           </Link>
           <Link
             href="/servicos"
-            className="text-white dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium"
+            className="text-white hover:text-gray-300 transition-colors font-medium"
           >
             Serviços
           </Link>
           <Link
             href="/equipe"
-            className="text-white dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium"
+            className="text-white hover:text-gray-300 transition-colors font-medium"
           >
             Equipe
           </Link>

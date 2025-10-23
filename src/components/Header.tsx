@@ -25,9 +25,10 @@ export default function Header() {
             height={80}
             className="absolute h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                        transition-all duration-500 ease-in-out
-                       hover:rotate-180 hover:scale-110
+                       hover:rotate-180 hover:scale-150
                        hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]
                        hover:brightness-125
+                       
                        cursor-pointer"
             priority
           />

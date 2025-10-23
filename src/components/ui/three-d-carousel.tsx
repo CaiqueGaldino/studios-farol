@@ -96,7 +96,7 @@ const Carousel = memo(
     isCarouselActive: boolean
   }) => {
     const isScreenSizeSm = useMediaQuery("(max-width: 640px)")
-    const cylinderWidth = isScreenSizeSm ? 1800 : 3000
+    const cylinderWidth = isScreenSizeSm ? 1200 : 1800
     const faceCount = cards.length
     const faceWidth = cylinderWidth / faceCount
     const radius = cylinderWidth / (2 * Math.PI)
@@ -203,6 +203,7 @@ interface ThreeDPhotoCarouselProps {
 
 function ThreeDPhotoCarousel({ images, media }: ThreeDPhotoCarouselProps) {
   const [activeItem, setActiveItem] = useState<MediaItem | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number>(0)
   const [isCarouselActive, setIsCarouselActive] = useState(true)
   const [isMounted, setIsMounted] = useState(false)
   const controls = useAnimation()
@@ -226,8 +227,9 @@ function ThreeDPhotoCarousel({ images, media }: ThreeDPhotoCarouselProps) {
     console.log("Cards loaded:", cards)
   }, [cards])
 
-  const handleClick = (item: MediaItem) => {
+  const handleClick = (item: MediaItem, index: number) => {
     setActiveItem(item)
+    setActiveIndex(index)
     setIsCarouselActive(false)
     controls.stop()
   }
@@ -237,9 +239,23 @@ function ThreeDPhotoCarousel({ images, media }: ThreeDPhotoCarouselProps) {
     setIsCarouselActive(true)
   }
 
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const nextIndex = (activeIndex + 1) % cards.length
+    setActiveIndex(nextIndex)
+    setActiveItem(cards[nextIndex])
+  }
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const prevIndex = (activeIndex - 1 + cards.length) % cards.length
+    setActiveIndex(prevIndex)
+    setActiveItem(cards[prevIndex])
+  }
+
   if (!isMounted) {
     return (
-      <div className="relative h-[700px] md:h-[800px] w-full overflow-hidden flex items-center justify-center">
+      <div className="relative h-[500px] md:h-[600px] w-full overflow-hidden flex items-center justify-center">
         <div className="text-white">Carregando...</div>
       </div>
     )
@@ -260,6 +276,38 @@ function ThreeDPhotoCarousel({ images, media }: ThreeDPhotoCarouselProps) {
             style={{ willChange: "opacity" }}
             transition={transitionOverlay}
           >
+            {/* Botão Anterior */}
+            <button
+              onClick={handlePrev}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 md:p-4 transition-all duration-200 group"
+              aria-label="Mídia anterior"
+            >
+              <svg
+                className="w-6 h-6 md:w-8 md:h-8 text-white group-hover:scale-110 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Botão Próximo */}
+            <button
+              onClick={handleNext}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 md:p-4 transition-all duration-200 group"
+              aria-label="Próxima mídia"
+            >
+              <svg
+                className="w-6 h-6 md:w-8 md:h-8 text-white group-hover:scale-110 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
             {activeItem.type === 'video' ? (
               <motion.video
                 layoutId={`media-${activeItem.url}`}
@@ -299,7 +347,7 @@ function ThreeDPhotoCarousel({ images, media }: ThreeDPhotoCarouselProps) {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="relative h-[700px] md:h-[800px] w-full overflow-hidden">
+      <div className="relative h-[500px] md:h-[600px] w-full overflow-hidden">
         <Carousel
           handleClick={handleClick}
           controls={controls}
