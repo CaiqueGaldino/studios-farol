@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Portifolio from "@/components/Portifolio";
@@ -13,7 +12,7 @@ export default function Home() {
       
       <main className="flex min-h-screen flex-col items-center justify-between">
         {/* Seção Header/Hero - Fundo escuro com gradiente */}
-        <div className="w-full bg-gradient-to-b from-[#362B23] via-[#2a221c] to-[#1a1410] pt-24">
+        <div className="w-full bg-linear-to-b from-[#362B23] via-[#2a221c] to-[#1a1410] pt-24">
           <Header />
         </div>
 

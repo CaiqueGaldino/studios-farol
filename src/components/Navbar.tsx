@@ -2,13 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Rationale } from "next/font/google";
-
-const rationale = Rationale({
-  subsets: ["latin"],
-  variable: "--font-rationale",
-  weight: "400"
-});
 
 export default function Navbar() {
   return (
