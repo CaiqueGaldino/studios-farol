@@ -1,12 +1,27 @@
 "use client";
 
 import Image from "next/image";
+import LiquidEther from "@/components/bits/LiquidEther";
 
 export default function Header() {
   return (
-    <header className="w-full py-32 text-center">
+    <header className="relative w-full py-32 text-center overflow-hidden">
+      {/* LiquidEther Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <LiquidEther
+          mouseForce={25}
+          cursorSize={120}
+          colors={['#362B23', '#1a1410', '#8B4513']}
+          autoDemo={true}
+          autoSpeed={0.3}
+          autoIntensity={1.5}
+          resolution={0.5}
+          className="w-full h-full"
+        />
+      </div>
+
       {/* Logo Studios Farol */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="relative flex justify-center items-center h-48 md:h-64 lg:h-80">
           {/* Imagem de fundo */}
           <Image

@@ -21,7 +21,7 @@ export default function Portifolio() {
       <div className="text-center mb-2">
         <br /> <br /><br /> <br />
         <h1 className="text-6xl md:text-7xl lg:text-7xl font-bold text-white mb-4">
-          CONHEÇA OS NOSSOS TRABALHOS
+          CONHEÇA O NOSSO TRABALHO
         </h1>
         <br /> <br />
         <EmblaCarouselThumbnails 

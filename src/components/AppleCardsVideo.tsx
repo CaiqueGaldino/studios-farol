@@ -83,7 +83,7 @@ export const AppleCardsVideo = ({ cards }: AppleCardsVideoProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 * index }}
-              className="relative h-80 w-56 md:h-160 md:w-96 shrink-0"
+              className="relative h-60 w-42 md:h-120 md:w-72 shrink-0"
             >
               <div className="relative h-full w-full overflow-hidden rounded-3xl bg-neutral-900">
                 {/* Vídeo */}
@@ -104,11 +104,11 @@ export const AppleCardsVideo = ({ cards }: AppleCardsVideoProps) => {
                 <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-black/70 via-transparent to-transparent" />
 
                 {/* Textos */}
-                <div className="absolute top-0 left-0 right-0 z-40 p-6 md:p-8">
-                  <p className="text-left font-sans text-sm font-medium text-white md:text-base">
+                <div className="absolute top-0 left-0 right-0 z-40 p-4 md:p-6">
+                  <p className="text-left font-sans text-xs font-medium text-white md:text-sm">
                     {card.category}
                   </p>
-                  <p className="mt-2 text-left font-sans text-xl font-bold text-white md:text-3xl">
+                  <p className="mt-1 text-left font-sans text-lg font-bold text-white md:text-2xl">
                     {card.title}
                   </p>
                 </div>
@@ -120,10 +120,10 @@ export const AppleCardsVideo = ({ cards }: AppleCardsVideoProps) => {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       exit={{ scale: 0 }}
-                      className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm"
+                      className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm"
                     >
                       <svg
-                        className="h-8 w-8 text-white ml-1"
+                        className="h-6 w-6 text-white ml-1"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
