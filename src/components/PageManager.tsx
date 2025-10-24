@@ -8,6 +8,7 @@ import FotografiasPage from "@/components/FotografiasPage";
 import Equipe from "@/components/Equipe";
 import Footer from "@/components/Footer";
 import { StaggeredMenu } from "@/components/bits/StaggeredMenu";
+import { assetPath } from "@/lib/asset-path";
 
 type PageType = "home" | "portfolio" | "trabalhos" | "fotografias" | "equipe" | "servicos" | "contato";
 
@@ -132,7 +133,7 @@ export default function PageManager() {
           socialItems={socialItems}
           displaySocials={true}
           displayItemNumbering={true}
-          logoUrl="/images/simbolo-branco.webp"
+          logoUrl={assetPath("/images/simbolo-branco.webp")}
           menuButtonColor="#fff"
           openMenuButtonColor="#000"
           accentColor="#8B4513"

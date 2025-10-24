@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import LiquidEther from "@/components/bits/LiquidEther";
+import { assetPath } from "@/lib/asset-path";
 
 export default function Header() {
   return (
@@ -25,7 +26,7 @@ export default function Header() {
         <div className="relative flex justify-center items-center h-48 md:h-64 lg:h-80">
           {/* Imagem de fundo */}
           <Image
-            src="/images/logo-cega-branco.webp"
+            src={assetPath("/images/logo-cega-branco.webp")}
             alt="Studios Farol Logo"
             width={600}
             height={200}
@@ -34,7 +35,7 @@ export default function Header() {
           />
           {/* Imagem sobreposta (centralizada sobre a primeira) */}
           <Image
-            src="/images/simbolo-branco.webp"
+            src={assetPath("/images/simbolo-branco.webp")}
             alt="Studios Farol Símbolo"
             width={80}
             height={80}

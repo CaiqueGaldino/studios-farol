@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/asset-path";
+
 export const equipe = [
     {
       quote:
@@ -41,31 +43,31 @@ export const equipe = [
       id: 1,
       title: "Paisagem Urbana",
       description: "Fotografia capturando a essência da cidade ao entardecer",
-      image: "/images/clients/1.png",
+      image: assetPath("/images/clients/1.png"),
     },
     {
       id: 2,
       title: "Retrato Artístico",
       description: "Jogo de luzes e sombras em retrato profissional",
-      image: "/images/clients/2.png",
+      image: assetPath("/images/clients/2.png"),
     },
     {
       id: 3,
       title: "Natureza Viva",
       description: "Momento único capturado na natureza",
-      image: "/images/clients/3.png",
+      image: assetPath("/images/clients/3.png"),
     },
     {
       id: 4,
       title: "Natureza Viva",
       description: "Momento único capturado na natureza",
-      image: "/images/clients/4.png",
+      image: assetPath("/images/clients/4.png"),
     },
     {
       id: 5,
       title: "Natureza Viva",
       description: "Momento único capturado na natureza",
-      image: "/images/clients/5.png",
+      image: assetPath("/images/clients/5.png"),
     },
 
   ];
@@ -75,42 +77,42 @@ export const equipe = [
       id: 1,
       title: 'Casamento',
       description: 'Uma celebração de amor e união.',
-      url: '/portifolio/videos/8.webm',
+      url: assetPath('/portifolio/videos/8.webm'),
       type: 'video' as const,
     },
     {
       id: 2,
       title: 'Vídeo Casamento',
       description: 'Registro em vídeo de momentos especiais.',
-      url: '/portifolio/videos/1.webm',
+      url: assetPath('/portifolio/videos/1.webm'),
       type: 'video' as const,
     },
     {
       id: 3,
       title: 'Ensaios',
       description: 'Sessões fotográficas criativas e artísticas.',
-      url: '/portifolio/videos/5.webm',
+      url: assetPath('/portifolio/videos/5.webm'),
       type: 'video' as const,
     },
     {
       id: 4,
       title: 'Vídeo Corporativo',
       description: 'Cobertura profissional de eventos empresariais.',
-      url: '/portifolio/videos/2.webm',
+      url: assetPath('/portifolio/videos/2.webm'),
       type: 'video' as const,
     },
     {
       id: 5,
       title: 'Novo Projeto',
       description: 'Uma visão inovadora para o futuro.',
-      url: '/portifolio/videos/7.webm',
+      url: assetPath('/portifolio/videos/7.webm'),
       type: 'video' as const,
     },
     { 
       id: 6,
       title: 'Ensaio Visual',
       description: 'Produção audiovisual criativa.',
-      url: '/portifolio/videos/3.webm',
+      url: assetPath('/portifolio/videos/3.webm'),
       type: 'video' as const,
     },
   ];

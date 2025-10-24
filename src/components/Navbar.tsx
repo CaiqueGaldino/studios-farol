@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/asset-path";
 
 interface NavbarProps {
   onMenuClick?: () => void;
@@ -17,7 +18,7 @@ export default function Navbar({ onMenuClick, menuButtonRef }: NavbarProps) {
           <div className="shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/simbolo-branco.webp"
+                src={assetPath("/images/simbolo-branco.webp")}
                 alt="Studios Farol Logo"
                 width={120}
                 height={40}
