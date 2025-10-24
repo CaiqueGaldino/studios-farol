@@ -5,8 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/studios-farol' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/studios-farol/' : '',
+  basePath: '/studios-farol',
+  assetPrefix: '/studios-farol/',
+  trailingSlash: true,
 };
 
 export default nextConfig;

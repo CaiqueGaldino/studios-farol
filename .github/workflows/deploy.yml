@@ -49,6 +49,21 @@ jobs:
         env:
           NODE_ENV: production
           NEXT_TELEMETRY_DISABLED: 1
+          CI: true
+          
+      - name: Verify out directory
+        run: |
+          echo "Checking if out directory exists..."
+          ls -la
+          if [ -d "./out" ]; then
+            echo "✓ out directory found"
+            ls -la ./out
+          else
+            echo "✗ out directory NOT found!"
+            echo "Searching for output directories..."
+            find . -maxdepth 2 -type d -name "out" -o -name ".next" | head -20
+            exit 1
+          fi
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
